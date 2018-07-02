@@ -21,9 +21,9 @@ class TestQueryPersonClassMethods(unittest.TestCase):
 
     def test_person_class_property_methods(self):
         self.assertEqual(per_1._name, "Jeff")
-        self.assertEqual(per_1.name, "Jeff")
+        self.assertEqual(per_1._name, "Jeff")
         self.assertEqual(per_1._age, 31)
-        self.assertEqual(per_1.age, 31)
+        self.assertEqual(per_1._age, 31)
 
     def test_query_count_class_method(self):
         self.assertEqual(Query.count(Person), 5)
@@ -39,7 +39,7 @@ class TestQueryPersonClassMethods(unittest.TestCase):
 
     def test_query_mean_age_class_method(self):
         self.assertEqual(Query.mean_age(Person), 29)
-    
+
     def test_person_count_class_method(self):
         self.assertEqual(Person.count(), 5)
 
